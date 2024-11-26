@@ -6,6 +6,7 @@
  */
 
 import React from 'react';
+import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import MyTabs from './navigator/MyTabs';
 
@@ -18,7 +19,9 @@ function App(): JSX.Element {
     <>
     <StatusBar barStyle="dark-content" />
     <SafeAreaView style={{ flex: 1 }}>
-      <MyTabs />
+      <NavigationContainer>
+        <MyTabs />
+      </NavigationContainer>
     </SafeAreaView>
     </>
   );
